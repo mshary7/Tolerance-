@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>رحلة التسامح</title>
+  <script src="/_sdk/element_sdk.js"></script>
+  <style>
+    body {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #ffffff;
+      min-height: 100%;
+      overflow-x: hidden;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 60px 30px;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 60px;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    .hero h1 {
+      font-size: 64px;
+      font-weight: 700;
+      color: #2d3748;
+      margin: 0 0 20px 0;
+      letter-spacing: 1px;
+    }
+
+    .hero p {
+      font-size: 22px;
+      color: #718096;
+      margin: 0;
+      line-height: 1.7;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .intro-card {
+      background: #f7fafc;
+      border-radius: 16px;
+      padding: 40px;
+      margin-bottom: 35px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      animation: fadeInUp 1s ease-out 0.3s both;
+      border: 1px solid #e2e8f0;
+    }
+
+    .intro-card p {
+      font-size: 19px;
+      color: #4a5568;
+      line-height: 1.9;
+      margin: 0;
+      font-weight: 400;
+    }
+
+    .content-section {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 40px;
+      margin-bottom: 25px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      animation: fadeInUp 1s ease-out 0.6s both;
+      cursor: pointer;
+      border: 1px solid #e2e8f0;
+    }
+
+    .content-section:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .content-section h2 {
+      font-size: 32px;
+      color: #2d3748;
+      margin: 0 0 20px 0;
+      font-weight: 600;
+    }
+
+    .content-section p, .content-section ul {
+      font-size: 18px;
+      color: #4a5568;
+      line-height: 1.8;
+      margin: 0 0 16px 0;
+    }
+
+    .content-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .content-section ul {
+      padding-right: 25px;
+      margin-bottom: 0;
+    }
+
+    .content-section li {
+      margin-bottom: 15px;
+      padding-right: 10px;
+    }
+
+    .content-section li:last-child {
+      margin-bottom: 0;
+    }
+
+    .highlight-box {
+      background: #2d3748;
+      color: white;
+      padding: 40px;
+      border-radius: 16px;
+      text-align: center;
+      margin-top: 40px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+      animation: fadeInUp 1s ease-out 0.9s both;
+    }
+
+    .highlight-box h2 {
+      font-size: 28px;
+      margin: 0 0 16px 0;
+      font-weight: 600;
+    }
+
+    .highlight-box p {
+      font-size: 19px;
+      margin: 0;
+      line-height: 1.8;
+      font-weight: 400;
+      opacity: 0.95;
+    }
+
+    .emoji {
+      font-size: 48px;
+      display: inline-block;
+      margin-left: 15px;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 40px 20px;
+      }
+
+      .hero h1 {
+        font-size: 48px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
+      .intro-card {
+        padding: 30px 25px;
+      }
+
+      .intro-card p {
+        font-size: 17px;
+      }
+
+      .content-section {
+        padding: 35px 30px;
+      }
+
+      .content-section h2 {
+        font-size: 28px;
+      }
+
+      .content-section p, .content-section ul {
+        font-size: 17px;
+      }
+
+      .highlight-box {
+        padding: 30px 25px;
+      }
+
+      .highlight-box h2 {
+        font-size: 26px;
+      }
+
+      .highlight-box p {
+        font-size: 18px;
+      }
+
+      .emoji {
+        font-size: 36px;
+      }
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+ </head>
+ <body>
+  <div class="container">
+   <div class="hero">
+    <h1 id="main-title">التسامح <span class="emoji">🕊️</span></h1>
+    <p id="main-subtitle">قوة داخلية تحررك من دائرة الحقد وتدخلك منطقة راحة البال</p>
+   </div>
+   <div class="intro-card">
+    <p id="intro-text">التسامح مو كلمة ناعمة نمرّ عليها مرور الكرام… هو قوة داخلية تشيلك من دائرة الحقد وتدخلك منطقة أوسع اسمها راحة البال. وخلّنا نقولها بصراحة: اللي يظن إن التسامح ضعف… غالبًا ما جرّب قوته.</p>
+   </div>
+   <div class="content-section">
+    <h2 id="section1-title">وش يعني التسامح؟ <span class="emoji">💭</span></h2>
+    <p>هو إنك تختار تحرّر نفسك قبل ما تحرّر الشخص اللي غ��ط.</p>
+    <p>هو إنك تطّلع من الم��ركة منتصر لأنك ما خليت الغضب يحكمك.</p>
+    <p>وهو فعل ناضج… يقدر عليه الشخص اللي فاهم قيمته وقيمة وقته.</p>
+   </div>
+   <div class="content-section">
+    <h2 id="section2-title">ليش مهم؟ <span class="emoji">✨</span></h2>
+    <ul>
+     <li>لأنه يخفّف الحمل العاطفي اللي ما له داعي.</li>
+     <li>لأنه يساعدك تتقدم بدل ما تجلس معلّق بين الماضي واليوم.</li>
+     <li>لأنه يخليك تبني علاقات أعمق وأكثر نضجًا.</li>
+     <li>ولأنه—للأمانة—ما في أحد فينا كامل، وكلنا نحتاج أحد يسامحنا يوم من الأيام.</li>
+    </ul>
+   </div>
+   <div class="content-section">
+    <h2 id="section3-title">كيف تتعامل مع فكرة التسامح؟ <span class="emoji">🌱</span></h2>
+    <p><strong>قيّم الموقف:</strong> وش اللي صار؟ وهل يستحق إنك تحمل وزنه معك كل يوم؟</p>
+    <p><strong>افصل بين الفعل والشخص:</strong> الناس تغلط، بس مو كل غلط يعكس جوهرهم.</p>
+    <p><strong>سامح لنفسك قبل غيرك:</strong> كثير ناس قاسين على أنفسهم أكثر من اللي غلط عليهم.</p>
+    <p>وإذا ما قد��ت تسامح كامل؟ عادي… ��ذ وقتك. التسامح رحلة مو زرّ.</p>
+   </div>
+   <div class="highlight-box">
+    <h2 id="conclusion-title">خلاصة مباشرة <span class="emoji">💝</span></h2>
+    <p>التسامح مو خدمة تقدّمها للناس… هو هدية تقدّمها لنفسك.</p>
+    <p>وهو خطوة شجاعة، فيها نضج وثقة وقلب كبير—مو تنازل.</p>
+   </div>
+  </div>
+  <script>
+    const defaultConfig = {
+      background_color: "#ffffff",
+      surface_color: "#f7fafc",
+      text_color: "#4a5568",
+      primary_action_color: "#2d3748",
+      secondary_action_color: "#2d3748",
+      font_family: "Segoe UI",
+      font_size: 16,
+      main_title: "التسامح",
+      main_subtitle: "قوة داخلية تحررك من دائرة الحقد وتدخلك منطقة راحة البال",
+      intro_text: "التسامح مو كلمة ناعمة نمرّ عليها مرور الكرام… هو قوة داخلية تشيلك من دائرة الحقد وتدخلك منطقة أوسع اسمها راحة البال. وخلّنا نقولها بصراحة: اللي يظن إن التسامح ضعف… غالبًا ما جرّب قوته.",
+      section1_title: "وش يعني التسامح؟",
+      section2_title: "ليش مهم؟",
+      section3_title: "كيف تتعامل مع فكرة التسامح؟",
+      conclusion_title: "خلاصة مباشرة"
+    };
+
+    async function onConfigChange(config) {
+      const backgroundColor = config.background_color || defaultConfig.background_color;
+      const surfaceColor = config.surface_color || defaultConfig.surface_color;
+      const textColor = config.text_color || defaultConfig.text_color;
+      const primaryActionColor = config.primary_action_color || defaultConfig.primary_action_color;
+      const secondaryActionColor = config.secondary_action_color || defaultConfig.secondary_action_color;
+      const fontFamily = config.font_family || defaultConfig.font_family;
+      const baseFontSize = config.font_size || defaultConfig.font_size;
+
+      document.body.style.background = backgroundColor;
+      document.body.style.fontFamily = `${fontFamily}, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif`;
+
+      const introCard = document.querySelector('.intro-card');
+      introCard.style.backgroundColor = surfaceColor;
+
+      const contentSections = document.querySelectorAll('.content-section');
+      contentSections.forEach(section => {
+        section.style.backgroundColor = backgroundColor;
+      });
+
+      const allText = document.querySelectorAll('.intro-card p, .content-section p, .content-section li');
+      allText.forEach(text => {
+        text.style.color = textColor;
+      });
+
+      const heroTitle = document.querySelector('.hero h1');
+      heroTitle.style.color = primaryActionColor;
+
+      const allHeadings = document.querySelectorAll('.content-section h2');
+      allHeadings.forEach(heading => {
+        heading.style.color = primaryActionColor;
+      });
+
+      const highlightBox = document.querySelector('.highlight-box');
+      highlightBox.style.backgroundColor = secondaryActionColor;
+
+      document.querySelector('.hero h1').style.fontSize = `${baseFontSize * 4.5}px`;
+      document.querySelector('.hero p').style.fontSize = `${baseFontSize * 1.5}px`;
+      document.querySelector('.intro-card p').style.fontSize = `${baseFontSize * 1.25}px`;
+      document.querySelectorAll('.content-section h2').forEach(h2 => {
+        h2.style.fontSize = `${baseFontSize * 2.25}px`;
+      });
+      document.querySelectorAll('.content-section p, .content-section ul').forEach(text => {
+        text.style.fontSize = `${baseFontSize * 1.19}px`;
+      });
+      document.querySelector('.highlight-box h2').style.fontSize = `${baseFontSize * 2}px`;
+      document.querySelector('.highlight-box p').style.fontSize = `${baseFontSize * 1.38}px`;
+
+      document.getElementById('main-title').textContent = (config.main_title || defaultConfig.main_title) + ' 🕊️';
+      document.getElementById('main-subtitle').textContent = config.main_subtitle || defaultConfig.main_subtitle;
+      document.getElementById('intro-text').textContent = config.intro_text || defaultConfig.intro_text;
+      document.getElementById('section1-title').innerHTML = (config.section1_title || defaultConfig.section1_title) + ' <span class="emoji">💭</span>';
+      document.getElementById('section2-title').innerHTML = (config.section2_title || defaultConfig.section2_title) + ' <span class="emoji">✨</span>';
+      document.getElementById('section3-title').innerHTML = (config.section3_title || defaultConfig.section3_title) + ' <span class="emoji">🌱</span>';
+      document.getElementById('conclusion-title').innerHTML = (config.conclusion_title || defaultConfig.conclusion_title) + ' <span class="emoji">💝</span>';
+    }
+
+    function mapToCapabilities(config) {
+      return {
+        recolorables: [
+          {
+            get: () => config.background_color || defaultConfig.background_color,
+            set: (value) => {
+              if (window.elementSdk) {
+                window.elementSdk.setConfig({ background_color: value });
+              }
+            }
+          },
+          {
+            get: () => config.surface_color || defaultConfig.surface_color,
+            set: (value) => {
+              if (window.elementSdk) {
+                window.elementSdk.setConfig({ surface_color: value });
+              }
+            }
+          },
+          {
+            get: () => config.text_color || defaultConfig.text_color,
+            set: (value) => {
+              if (window.elementSdk) {
+                window.elementSdk.setConfig({ text_color: value });
+              }
+            }
+          },
+          {
+            get: () => config.primary_action_color || defaultConfig.primary_action_color,
+            set: (value) => {
+              if (window.elementSdk) {
+                window.elementSdk.setConfig({ primary_action_color: value });
+              }
+            }
+          },
+          {
+            get: () => config.secondary_action_color || defaultConfig.secondary_action_color,
+            set: (value) => {
+              if (window.elementSdk) {
+                window.elementSdk.setConfig({ secondary_action_color: value });
+              }
+            }
+          }
+        ],
+        borderables: [],
+        fontEditable: {
+          get: () => config.font_family || defaultConfig.font_family,
+          set: (value) => {
+            if (window.elementSdk) {
+              window.elementSdk.setConfig({ font_family: value });
+            }
+          }
+        },
+        fontSizeable: {
+          get: () => config.font_size || defaultConfig.font_size,
+          set: (value) => {
+            if (window.elementSdk) {
+              window.elementSdk.setConfig({ font_size: value });
+            }
+          }
+        }
+      };
+    }
+
+    function mapToEditPanelValues(config) {
+      return new Map([
+        ["main_title", config.main_title || defaultConfig.main_title],
+        ["main_subtitle", config.main_subtitle || defaultConfig.main_subtitle],
+        ["intro_text", config.intro_text || defaultConfig.intro_text],
+        ["section1_title", config.section1_title || defaultConfig.section1_title],
+        ["section2_title", config.section2_title || defaultConfig.section2_title],
+        ["section3_title", config.section3_title || defaultConfig.section3_title],
+        ["conclusion_title", config.conclusion_title || defaultConfig.conclusion_title]
+      ]);
+    }
+
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+      });
+    }
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a882c787304cdfc',t:'MTc2NDgxODQ4OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
